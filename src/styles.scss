@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #007bff; /* Bleu */
+  --secondary-color: #28a745; /* Vert */
+  --text-color: #333;
+  --bg-color: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+nav {
+  background: var(--primary-color);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,11 @@
+<h1>Bienvenue sur BOOSTCOM</h1>
+<p>Découvrez nos services de recrutement et de gestion.</p>
+<div>
+    <h2>Products</h2>
+    <div *ngIf="loading">Loading...</div>
+    <ul *ngIf="!loading">
+      <li *ngFor="let product of products">
+        {{ product.name }} - {{ product.price }}
+      </li>
+    </ul>
+  </div>
