@@ -6,10 +6,10 @@ import { appConfig } from './app/app.config';
 import { AuthInterceptor } from './app/interceptors/auth.interceptor';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
-bootstrapApplication(AppComponent,  {
+bootstrapApplication(AppComponent, {
   providers: [
-    provideHttpClient(withInterceptors([AuthInterceptor])),
-    provideRouter(routes) 
-  ], 
-  ...appConfig
+    provideHttpClient(withInterceptors([AuthInterceptor])), // ✅ Corrigé
+    provideRouter(routes),
+    ...(appConfig.providers || []) // ✅ Vérifie que `appConfig.providers` est défini
+  ]
 }).catch(err => console.error(err));
